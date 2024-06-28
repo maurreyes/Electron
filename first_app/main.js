@@ -11,5 +11,12 @@ app.whenReady().then(() => {
             }
         });
 
-        myWindow.loadFile('index.html')
+        myWindow.loadFile('index.html');
+        tray.setToolTip('Electron rocks!')        
+
+        const tray = new Tray('electron-icon.png')
+
+        const contextMenu = Menu.builFromTemplate([
+            { label: 'Cool', type: 'radio'},
+        ])
 })
