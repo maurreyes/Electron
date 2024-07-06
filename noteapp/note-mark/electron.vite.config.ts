@@ -4,9 +4,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin()]
-  },
-  preload: {
     plugins: [externalizeDepsPlugin()],
     resolve: {
       alias: {
@@ -28,9 +25,9 @@ export default defineConfig({
         '@/assets': resolve('src/renderer/src/assets'),
         '@/store': resolve('src/renderer/src/store'),
         '@/components': resolve('src/renderer/src/components'),
-        '@/mocks': resolve('src/renderer/src/mocks'),
+        '@/mocks': resolve('src/renderer/src/mocks')
       }
     },
     plugins: [react()]
   }
-}
+})
